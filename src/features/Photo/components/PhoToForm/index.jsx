@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, FormGroup, Spinner, Form, Label, Input } from "reactstrap";
+import { Button, FormGroup, Form, Label, Input } from "reactstrap";
 import { PHOTO_CATEGORY_OPTIONS } from "../../../../constants/global";
+import Images from "../../../../constants/images";
+import Select from "react-select";
 
 PhotoForm.propTypes = {
   onSubmit: PropTypes.func,
@@ -26,18 +28,24 @@ function PhotoForm(props) {
           id="categoryId"
           placeholder="What's your photo category"
           options={PHOTO_CATEGORY_OPTIONS}
-        ></Select>
+        />
       </FormGroup>
 
-      {/* <FormGroup>
+      <FormGroup>
         <Label for="categoryId">Photo</Label>
-        <Select
-          name="categoryId"
-          id="categoryId"
-          placeholder="What's your photo category"
-          options={PHOTO_CATEGORY_OPTIONS}
-        ></Select>
-      </FormGroup> */}
+        <div>
+          <Button type="button" outline color="primary">
+            Random a photo
+          </Button>
+        </div>
+        <div>
+          <img width="200px" height="200px" src={Images.COLORFUL_BG} alt="colorfull"></img>
+        </div>
+      </FormGroup>
+
+      <FormGroup>
+        <Button color="primary">Add to album</Button>
+      </FormGroup>
     </Form>
   );
 }
