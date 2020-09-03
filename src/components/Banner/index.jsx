@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import React from "react";
 import "./Banner.scss";
-import PropTypes from "prop-types";
 
 Banner.propTypes = {
   title: PropTypes.string,

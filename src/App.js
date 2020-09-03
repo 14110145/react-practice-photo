@@ -1,10 +1,10 @@
-import React, { Suspense } from "react";
-import "./App.scss";
-import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import NotFound from "./components/NotFound";
+import React, { Suspense } from "react";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import "./App.scss";
 import Header from "./components/Header";
+import NotFound from "./components/NotFound";
+
 
 const PhoTo = React.lazy(() => import("./features/Photo"));
 
